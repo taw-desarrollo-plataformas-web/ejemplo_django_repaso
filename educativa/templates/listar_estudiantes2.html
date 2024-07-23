@@ -1,0 +1,30 @@
+{% extends "principal.html" %}
+{% block contentido %}
+
+  <h3>Listado de Estudiantes</h3>
+  <p><b>Número de Estudiantes: ({{numero_estudiantes}})</b> </p>
+  <table id="tabla_datos">
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Correo</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for e in estudiantes  %}
+      <tr>
+        <td>{{e.nombre}}</td>
+        <td>{{e}}</td>
+        <td>{{e}}</td>
+      </tr>
+      {% endfor %}
+
+    </table>
+  </tbody>
+    <script type="text/javascript">
+      $(document).ready( function () {
+          $('#tabla_datos').DataTable();
+        });
+    </script>
+{% endblock %}
