@@ -1,0 +1,12 @@
+{% extends "principal.html" %}
+
+{% block contentido %}
+
+<h2>Editar Estudiante</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ formulario.as_p }}
+    <p><input type="submit" value="Actualizar Estudiante" class="btn btn-primary"/></p>
+</form>
+
+{% endblock %}
