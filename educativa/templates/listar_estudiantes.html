@@ -1,9 +1,11 @@
-{% extends "principal.html" %}
+{% extends "principal2.html" %}
 {% block contentido %}
 
   <h3>Listado de Estudiantes</h3>
   <p><b>Número de Estudiantes: ({{numero_estudiantes}})</b> </p>
-  <table id="tabla_datos">
+
+  <div class="table-wrapper">
+  <table id="tabla_datos" class="styled-table">
     <thead>
     <tr>
       <th>Nombre</th>
@@ -24,11 +26,11 @@
       </tr>
       {% endfor %}
 
+    </tbody>
     </table>
-  </tbody>
+  </div>
     <script type="text/javascript">
       $(document).ready( function () {
-          $('#tabla_datos').DataTable();
         });
     </script>
 {% endblock %}

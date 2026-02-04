@@ -1,12 +1,15 @@
-{% extends "principal.html" %}
+{% extends "principal2.html" %}
 
 {% block contentido %}
 
 <h2>Crear Estudiante</h2>
-<form action="" method="post">
+
+<div class="card">
+<form action="" method="post" class="form" autocomplete="on">
   {% csrf_token %}
   {{formulario.as_p}}
-  <p><input type='submit' value='Agregar'/></p>
+  <p><input type='submit' value='Agregar' class="btn btn-primary"/></p>
 </form>
+</div>
 
 {% endblock %}

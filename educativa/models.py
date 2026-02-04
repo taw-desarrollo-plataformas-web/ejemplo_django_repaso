@@ -29,7 +29,7 @@ class Docente(models.Model):
             related_name="docentes_ciudad")
 
     def __str__(self):
-        return "Docente: %s - %s - %s - ciudad (%s)" % (
+        return "DOCENTE: %s - %s - %s - ciudad (%s)" % (
             self.nombre,
             self.titulo,
             self.contrato,

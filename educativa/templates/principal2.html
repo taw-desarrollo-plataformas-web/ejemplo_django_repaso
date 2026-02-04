@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {% load static %}
+  <title>-Plantilla Landing - Demo</title>
+
+  <!-- Fuente opcional (puede quitarse) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/miestilo2.css' %}">
+  <script
+			  src="https://code.jquery.com/jquery-3.6.3.min.js"
+			  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+			  crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <span class="brand-mark">U</span>
+        <span>Proyecto Universidad</span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul>
+         <li><a href="{% url 'inicio' %}">inicio</a></li> |
+         <li><a href="{% url 'listar_estudiantes' %}">estudiantes</a></li> |
+         <li><a href="{% url 'listar_docentes' %}">docentes</a></li>
+         <li><a href="{% url 'crear_estudiante' %}">+ estudiante</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <div class="kicker"><span class="dot"></span> Plantilla HTML5 + jQuery</div>
+
+          <h1>
+            Un diseño <span class="hl-yellow">moderno</span>
+            para proyectos académicos
+          </h1>
+
+          <p class="subtitle">
+            Ejemplo de plantilla.
+          </p>
+
+        </div>
+     </div>
+
+    </section>
+
+    <section class="section" id="beneficios">
+      <div class="container">
+          {% block contentido %}
+          {% endblock %}
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Loja - Ecuador | Plantilla Académica|</div>
+      <div>{% now "j F Y H:i" %}</div>
+
+    </div>
+  </footer>
+
+  </body>
+</html>
